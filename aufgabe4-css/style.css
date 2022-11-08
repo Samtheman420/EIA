@@ -1,30 +1,28 @@
-header
-
-{
-    background-color:black ;
-    color:white;
+header {
+    background-color: black;
+    color: white;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 10px;
-    border-radius: 25px; 
-   background-image:url("istockphoto-1129050990-612x612.jpg");
+    border-radius: 25px;
+    background-image: url("istockphoto-1129050990-612x612.jpg");
 
     border: 20px solid white;
-    
+
 }
 
-body
-{
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: grey;
     background-size: 100%;
     background-position: center;
     background-attachment: fixed;
-box-shadow: 0px 2px 4px rgba(0,0,0,0.144);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.144);
 }
-h1
-{
+
+h1 {
     font-size: 60px;
+    text-align: left;
 }
 
 
@@ -32,33 +30,54 @@ h1
 
 
 
-footer
-{
-background-color:black ;
-color:white;
-padding: 20px;
-font-size: 20px;
-font-family: Arial, Helvetica, sans-serif;
-margin: 10px;
-border-radius: 15px;
-border: 10px solid white;
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    border-radius: 15px;
+    border: 10px solid white;
+    background-image: url("istockphoto-1129050990-612x612.jpg");
+position: center;
+   
 }
 
-a
-{
 
-text-decoration: none;
-color:white;
+table
+{
+font-size: 25px;
+text-align: center;
+margin-bottom: 25px;
+}
+th
+{
+font-size: 30px;
+height: 100;
+font-weight: normal;
+}
+.tres
+{
+height: 20px;   
+font-size: 30px;
+position: inherit;
 }
 
-image
-{
+
+a {
+
+    text-decoration: none;
+    color: white;
+}
+
+image {
 
     border-radius: 30px;
 
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: space-around;
     margin: 10px;
@@ -66,24 +85,82 @@ image
     border: 10px solid white;
     border-radius: 7px;
 }
-.nav a:hover
-{
+
+.nav a:hover {
     color: blue;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+
+
+ul {
+    font-size: 20px;
+color: white;
+
+
+}
+li
+{
+    list-style: none;
+}
+form
+{
+    text-align: center;
+    
+}
+
+input
+
+{
+font-size: 40px;
+color: black;
+border-radius: 10px;
+width: 60%;
+
+}
+.message
+{
+
+    height: 100px;
+}
+
+.button
+{
+padding-right: 10px;
+width: 150px;
+padding-top: 7px;
+}
+
+#Logo
+
+{
+    float: right;
+    margin-right: 260px;
+    margin-top: 25px;
+    height: 5rem;
+    width: 10rem;
+    border-bottom: none;
 }
 
 p
 {
-    font-size: 20px;
+    color: white;
 }
 
-
-
-
-ul
+h2
 {
-    font-size: 20px;
-    background-color: black;
-    color:white;
-    border: 5px solid white;
-    
+    color: white;
+}
+h1
+{
+    color: white;
+   text-align: center;
+}
+h3
+{
+    color: white;
 }
