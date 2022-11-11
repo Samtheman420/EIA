@@ -6,7 +6,24 @@ header {
     margin: 10px;
     border-radius: 25px;
     background-image: url("istockphoto-1129050990-612x612.jpg");
+    background-position: center;
+    background-size: cover;
     border: 20px solid white;
+    animation-name:header;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes header {
+    0% {
+        background-image: url("istockphoto-1129050990-612x612.jpg");
+    }
+    50% {
+        background-image: url("punctured-grey-metal-sheet-background-header.jpg");
+    }
+    100% {
+        background-image: url("istockphoto-1129050990-612x612.jpg");
+    }
 }
 
 body {
@@ -22,9 +39,6 @@ h1 {
     font-size: 60px;
     text-align: left;
 }
-
-
-
 
 
 
@@ -88,7 +102,8 @@ image {
 }
 
 p {
-    font-size: 20px;
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -181,4 +196,3 @@ h3 {
     opacity: 0.5;
 
 }
-
