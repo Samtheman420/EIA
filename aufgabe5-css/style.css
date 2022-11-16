@@ -14,6 +14,16 @@ header {
     animation-iteration-count: infinite;
 }
 
+nav img{
+
+    position: fixed;
+    right: 0px;
+    z-index: 1;
+    width: 20%;
+    top: 0px;
+    transition: 1s;
+    transform: scale(110%)
+}
 @keyframes header {
     0% {
         background-image: url("istockphoto-1129050990-612x612.jpg");
@@ -155,6 +165,7 @@ input {
 
 p {
     color: white;
+    font-size: 70px;
 }
 
 h2 {
