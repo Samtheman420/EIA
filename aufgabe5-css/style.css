@@ -9,12 +9,13 @@ header {
     background-position: center;
     background-size: cover;
     border: 20px solid white;
-    animation-name:header;
+    animation-name: header;
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
 
-nav img{
+
+nav img {
 
     position: fixed;
     right: 0px;
@@ -24,13 +25,16 @@ nav img{
     transition: 1s;
     transform: scale(110%)
 }
+
 @keyframes header {
     0% {
         background-image: url("istockphoto-1129050990-612x612.jpg");
     }
+
     50% {
         background-image: url("punctured-grey-metal-sheet-background-header.jpg");
     }
+
     100% {
         background-image: url("istockphoto-1129050990-612x612.jpg");
     }
@@ -43,11 +47,16 @@ body {
     background-position: center;
     background-attachment: fixed;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.144);
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
+
 
 h1 {
     font-size: 60px;
     text-align: left;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -113,6 +122,7 @@ image {
 
 p {
     font-size: 30px;
+    font-family: 'Barlow', sans-serif;
     font-family: 'Oswald', sans-serif;
 }
 
