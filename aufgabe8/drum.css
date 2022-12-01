@@ -1,0 +1,62 @@
+body
+{
+
+
+justify-content:center;
+align-items:center ;
+height: 100vh;
+margin: 0 auto;
+background-color: black;
+}
+
+.hihat,.kick,.laugh,.snare
+
+{
+background-color: cyan;
+font: size 30px; 
+font-family: monospace;
+
+
+}
+
+.a,.c,.f,.d
+{
+background-color: aliceblue;
+font-family: monospace;
+font: size 30px;
+}
+#button
+{
+margin: 0 auto;
+margin-top: +7%;
+width: 150px;
+height: 150px;
+
+}
+button
+{
+width: 150px;
+height: 150px;
+border-radius: 9px;
+}
+
+td
+{
+    padding:5px;
+}
+
+h1
+{
+
+    color: aliceblue;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.play
+
+{
+   margin-top: 25px;
+   
+}
