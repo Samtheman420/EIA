@@ -9,40 +9,47 @@ margin: 0 auto;
 background-color: black;
 }
 
-.hihat,.kick,.laugh,.snare
+.hihat,.kick,.laugh,.snare,.e,.a,.c,.f,.d
 
 {
 background-color: cyan;
 font: size 30px; 
 font-family: monospace;
-
-
-}
-
-.a,.c,.f,.d
-{
+color: black;
 background-color: aliceblue;
-font-family: monospace;
-font: size 30px;
+transition-duration: 0.5s;
 }
+
+
 #button
 {
 margin: 0 auto;
 margin-top: +7%;
 width: 150px;
 height: 150px;
-
+transition-duration: 0.5s;
 }
+
+
 button
 {
 width: 150px;
 height: 150px;
 border-radius: 9px;
+color: aliceblue;
 }
 
-td
+.button:hover
+{
+    color: aliceblue;
+    background-color: aqua;
+}
+
+.td:hover
 {
     padding:5px;
+    color: aliceblue;
+    background-color: aqua;
 }
 
 h1
@@ -51,7 +58,7 @@ h1
     color: aliceblue;
     font-size: 70px;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: monospace;
 }
 
 .play
