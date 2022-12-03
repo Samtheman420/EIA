@@ -1,4 +1,4 @@
-function playSample(sound) {
+function playSample(button) {
 }
 const sound1 = new Audio('L08_task_material_assets_Keyboard_a.mp3.mp3');
 const sound2 = new Audio('L08_task_material_assets_Keyboard_c.mp3.mp3');
@@ -9,6 +9,9 @@ const sound6 = new Audio('L08_task_material_assets_DrumPad_snare.mp3.mp3');
 const sound7 = new Audio('L08_task_material_assets_DrumPad_laugh-1.mp3.mp3');
 const sound8 = new Audio('L08_task_material_assets_DrumPad_kick.mp3.mp3');
 const sound9 = new Audio('L08_task_material_assets_DrumPad_hihat.mp3.mp3');
-sound.play();
+button.play();
 document.querySelector();
+setInterval(function () {
+    // Anweisungen
+}, 500);
 //# sourceMappingURL=drumscript.js.map
