@@ -20,6 +20,7 @@ background-color: aliceblue;
 transition-duration: 0.5s;
 }
 
+  
 
 #button
 {
@@ -38,29 +39,28 @@ height: 150px;
 border-radius: 9px;
 color: aliceblue;
 box-shadow: 3px 3px #Ffffff;
+transition-duration: 0.5s;
 }
 
-.button:hover
+button:hover
 {
     color: aliceblue;
     background-color: #00FFFF;
 }
 
-.td:hover
-{
-    padding:5px;
-    color: aliceblue;
-    background-color: #00FFFF;
-}
+
 
 h1
-{
 
-    color: aliceblue;
+{
+    color:#Ffffff ;
     font-size: 70px;
     text-align: center;
     font-family: monospace;
     box-shadow: 3px 3px #Ffffff;
+}
+   
+    
 
 .play
 
