@@ -6,17 +6,17 @@ justify-content:center;
 align-items:center ;
 height: 100vh;
 margin: 0 auto;
-background-color: black;
+background-color: #000000;
 }
 
 .hihat,.kick,.laugh,.snare,.e,.a,.c,.f,.d
 
 {
-background-color: cyan;
+background-color: #00ffff;
 font: size 30px; 
 font-family: monospace;
-color: black;
-background-color: aliceblue;
+color: #000000;
+background-color: #Ffffff;
 transition-duration: 0.5s;
 }
 
@@ -62,9 +62,17 @@ h1
    
     
 
-.play
+.play-button
 
 {
    margin-top: 25px;
+   align-items: center;
+   text-align: center;
+   width: 150px;
+height: 150px;
+border-radius: 9px;
+color: aliceblue;
+box-shadow: 3px 3px #Ffffff;
+transition-duration: 0.5s;
    
 }

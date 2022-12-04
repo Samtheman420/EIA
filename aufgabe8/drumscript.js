@@ -10,7 +10,8 @@ const sound7 = new Audio('L08_task_material_assets_DrumPad_laugh-1.mp3.mp3');
 const sound8 = new Audio('L08_task_material_assets_DrumPad_kick.mp3.mp3');
 const sound9 = new Audio('L08_task_material_assets_DrumPad_hihat.mp3.mp3');
 button.play();
-document.querySelector();
+document.querySelector("#button");
+window.addEventListener("play", playSample);
 setInterval(function () {
     // Anweisungen
 }, 500);
