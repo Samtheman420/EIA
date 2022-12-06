@@ -37,4 +37,21 @@ document.querySelector(".kick").addEventListener("click", function () {
 document.querySelector(".hihat").addEventListener("click", function () {
     playSample(soundhihat);
 });
+const beat = [('kick.mp3.mp3'), ('hihat.mp3.mp3'), ("snare.mp3.mp3")];
+const zaehler = 0;
+document.querySelector("#play-button").addEventListener("click", function () { });
+function playThis(soundQuelle) {
+    const sound = new Audio(soundQuelle);
+    sound.play();
+}
+function playBeat() {
+    setInterval(function () {
+        playThis(beat[zaehler]);
+        console.log("test");
+        zaehler++;
+        if (zaehler == 3) {
+            zaehler = 0;
+        }
+    }, 500);
+}
 //# sourceMappingURL=drumscript.js.map
