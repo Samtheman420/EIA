@@ -1,12 +1,12 @@
-const sounda = new Audio('a.mp3.mp3');
-const soundc = new Audio('c.mp3.mp3');
-const soundf = new Audio('f.mp3.mp3');
-const soundd = new Audio('d.mp3.mp3');
-const sounde = new Audio('e.mp3.mp3');
-const soundsnare = new Audio('snare.mp3.mp3');
-const soundlaugh = new Audio('laugh.mp3.mp3');
-const soundkick = new Audio('kick.mp3.mp3');
-const soundhihat = new Audio('hihat.mp3.mp3');
+const sounda = new Audio('sounds/a.mp3.mp3');
+const soundc = new Audio('sounds/c.mp3.mp3');
+const soundf = new Audio('sounds/f.mp3.mp3');
+const soundd = new Audio('sounds/d.mp3.mp3');
+const sounde = new Audio('sounds/e.mp3.mp3');
+const soundsnare = new Audio('sounds/snare.mp3.mp3');
+const soundlaugh = new Audio('sounds/laugh.mp3.mp3');
+const soundkick = new Audio('sounds/kick.mp3.mp3');
+const soundhihat = new Audio('sounds/hihat.mp3.mp3');
 function playSample(sound) {
     sound.play();
 }

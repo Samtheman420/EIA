@@ -1,12 +1,12 @@
-const sounda: HTMLAudioElement = new Audio('a.mp3.mp3')
-const soundc: HTMLAudioElement = new Audio('c.mp3.mp3');
-const soundf: HTMLAudioElement = new Audio('f.mp3.mp3');
-const soundd: HTMLAudioElement = new Audio('d.mp3.mp3');
-const sounde: HTMLAudioElement = new Audio('e.mp3.mp3');
-const soundsnare: HTMLAudioElement = new Audio('snare.mp3.mp3');
-const soundlaugh: HTMLAudioElement = new Audio('laugh.mp3.mp3');
-const soundkick: HTMLAudioElement = new Audio('kick.mp3.mp3');
-const soundhihat: HTMLAudioElement = new Audio('hihat.mp3.mp3');
+const sounda = new Audio('sounds/a.mp3.mp3');
+const soundc = new Audio('sounds/c.mp3.mp3');
+const soundf = new Audio('sounds/f.mp3.mp3');
+const soundd = new Audio('sounds/d.mp3.mp3');
+const sounde = new Audio('sounds/e.mp3.mp3');
+const soundsnare = new Audio('sounds/snare.mp3.mp3');
+const soundlaugh = new Audio('sounds/laugh.mp3.mp3');
+const soundkick = new Audio('sounds/kick.mp3.mp3');
+const soundhihat = new Audio('sounds/hihat.mp3.mp3');
 function playSample(sound) {
     sound.play()
 }
