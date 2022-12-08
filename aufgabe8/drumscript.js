@@ -37,21 +37,27 @@ document.querySelector(".kick").addEventListener("click", function () {
 document.querySelector(".hihat").addEventListener("click", function () {
     playSample(soundhihat);
 });
-const beat = [('kick.mp3.mp3'), ('hihat.mp3.mp3'), ("snare.mp3.mp3")];
-const zaehler = 0;
-document.querySelector("#play-button").addEventListener("click", function () { });
+let beat = ['sounds/kick.mp3.mp3', 'sounds/hihat.mp3.mp3', "sounds/snare.mp3.mp3", 'sounds/hihat.mp3.mp3'];
+let zaehler = 0;
+document.querySelector(".play-button").addEventListener("click", playBeat);
 function playThis(soundQuelle) {
-    const sound = new Audio(soundQuelle);
-    sound.play();
+    const beat = new Audio(soundQuelle);
+    beat.play();
 }
 function playBeat() {
     setInterval(function () {
         playThis(beat[zaehler]);
         console.log("test");
         zaehler++;
-        if (zaehler == 3) {
+        console.log(beat[zaehler]);
+        if (zaehler === 3) {
             zaehler = 0;
         }
+        else if ()
+            ;
     }, 500);
+    document.querySelector(".play-button").addEventListener("click", stopBeat);
+    function playThis(string) {
+    }
 }
 //# sourceMappingURL=drumscript.js.map

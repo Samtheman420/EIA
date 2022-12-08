@@ -39,12 +39,12 @@ document.querySelector(".hihat").addEventListener("click", function () {
 
 })
 
-const beat: string[] = [('kick.mp3.mp3'),('hihat.mp3.mp3'),("snare.mp3.mp3")]
-const zaehler: number = 0;
-document.querySelector("#play-button").addEventListener("click",function(){})
+let beat: string[] = ['sounds/kick.mp3.mp3','sounds/hihat.mp3.mp3',"sounds/snare.mp3.mp3",'sounds/hihat.mp3.mp3']
+let zaehler: number = 0;
+document.querySelector(".play-button").addEventListener("click",playBeat)
 function playThis(soundQuelle: string):void {
-const sound: HTMLAudioElement = new Audio(soundQuelle);
-sound.play ()
+const beat: HTMLAudioElement = new Audio(soundQuelle);
+beat.play ()
 
 }
 function playBeat(): void{
@@ -52,13 +52,18 @@ setInterval(function ():void {
 playThis(beat[zaehler]);
 console.log ("test");
 zaehler++;
-if (zaehler== 3)  {
-zaehler= 0;
+console.log(beat[zaehler])
+if (zaehler === 3)  {
+zaehler = 0;
+
 
 }
+else if
+
 },500);
-    
-
-
+ 
+   
+document.querySelector(".play-button").addEventListener("click",stopBeat)
+function playThis( : string):void {
 
 }
