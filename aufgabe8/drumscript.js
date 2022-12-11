@@ -53,11 +53,30 @@ function playBeat() {
         if (zaehler === 3) {
             zaehler = 0;
         }
-        else if ()
-            ;
-    }, 500);
-    document.querySelector(".play-button").addEventListener("click", stopBeat);
-    function playThis(string) {
+        500;
+    });
+    {
+        let interval = 0;
+    }
+    function PlayBeat() {
+        if (document.getElementsByClassName("play-button").classList.contains("playbutton-play")) {
+            document.getElementsByClassName("play-button").classList.remove("playbutton-play");
+            document.getElementsByClassName("play-button").classList.add("playbutton-stop");
+            interval = setInterval(beat, 350);
+        }
+        else {
+            document.getElementsByClassName("play-button").classList.remove("play-button-stop");
+            document.getElementsByClassName("play-button").classList.add("playbutton-play");
+            clearInterval(interval);
+        }
+    }
+    function Remix() {
+        document.querySelector("#remix-button").addEventListener("click", function () {
+            Remix = setInterval(function () {
+                playSample(beat[zaehler]);
+                zaehler = Math.floor(Math.random() * 9);
+            }, 300);
+        });
     }
 }
 //# sourceMappingURL=drumscript.js.map

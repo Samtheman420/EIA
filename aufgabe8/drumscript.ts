@@ -39,31 +39,47 @@ document.querySelector(".hihat").addEventListener("click", function () {
 
 })
 
-let beat: string[] = ['sounds/kick.mp3.mp3','sounds/hihat.mp3.mp3',"sounds/snare.mp3.mp3",'sounds/hihat.mp3.mp3']
+let beat: string[] = ['sounds/kick.mp3.mp3', 'sounds/hihat.mp3.mp3', "sounds/snare.mp3.mp3", 'sounds/hihat.mp3.mp3']
 let zaehler: number = 0;
-document.querySelector(".play-button").addEventListener("click",playBeat)
-function playThis(soundQuelle: string):void {
-const beat: HTMLAudioElement = new Audio(soundQuelle);
-beat.play ()
+document.querySelector(".play-button").addEventListener("click", playBeat)
+function playThis(soundQuelle: string): void {
+    const beat: HTMLAudioElement = new Audio(soundQuelle);
+    beat.play()
 
 }
-function playBeat(): void{
-setInterval(function ():void {
-playThis(beat[zaehler]);
-console.log ("test");
-zaehler++;
-console.log(beat[zaehler])
-if (zaehler === 3)  {
-zaehler = 0;
+function playBeat(): void {
+    setInterval(function (): void {
+        playThis(beat[zaehler]);
+        console.log("test");
+        zaehler++;
+        console.log(beat[zaehler])
+        if (zaehler === 3) {
+            zaehler = 0;
+        } 500);
+
+    { let interval: number = 0; }
+    function PlayBeat() {
+        if (document.getElementsByClassName("play-button").classList.contains("playbutton-play")) {
+            document.getElementsByClassName("play-button").classList.remove("playbutton-play");
+            document.getElementsByClassName("play-button").classList.add("playbutton-stop");
+            interval = setInterval(beat, 350);
+        }
+        else {
+            document.getElementsByClassName("play-button").classList.remove("play-button-stop");
+            document.getElementsByClassName("play-button").classList.add("playbutton-play");
+            clearInterval(interval);
+        }
 
 
-}
-else if
 
-},500);
- 
-   
-document.querySelector(".play-button").addEventListener("click",stopBeat)
-function playThis( : string):void {
 
-}
+    }
+    function Remix() {
+        document.querySelector("#remix-button").addEventListener("click", function () {
+            Remix = setInterval(function () {
+                playSample(beat[zaehler]);
+                zaehler = Math.floor(Math.random() * 9);
+            }, 300);
+        });
+
+    }
