@@ -49,34 +49,39 @@ function playBeat() {
         playThis(beat[zaehler]);
         console.log("test");
         zaehler++;
-        console.log(beat[zaehler]);
         if (zaehler === 3) {
             zaehler = 0;
         }
         500;
     });
-    {
-        let interval = 0;
-    }
-    function PlayBeat() {
-        if (document.getElementsByClassName("play-button").classList.contains("playbutton-play")) {
-            document.getElementsByClassName("play-button").classList.remove("playbutton-play");
-            document.getElementsByClassName("play-button").classList.add("playbutton-stop");
-            interval = setInterval(beat, 350);
+    let playstopBTN = document.getElementById("playstop");
+    let count = 0;
+    function playstop() {
+        if (playstopBTN.classList.contains('fa-play')) {
+            playstopBTN.classList.remove('fa-play');
+            playstopBTN.classList.add('fa-pause');
+            playBeat();
+            console.log('2');
         }
         else {
-            document.getElementsByClassName("play-button").classList.remove("play-button-stop");
-            document.getElementsByClassName("play-button").classList.add("playbutton-play");
-            clearInterval(interval);
+            playstopBTN.classList.remove('fa-pause');
+            playstopBTN.classList.add('fa-play');
+            clearInterval(beatid);
+            console.log('3');
         }
     }
-    function Remix() {
-        document.querySelector("#remix-button").addEventListener("click", function () {
-            Remix = setInterval(function () {
-                playSample(beat[zaehler]);
-                zaehler = Math.floor(Math.random() * 9);
-            }, 300);
-        });
+    document.querySelector('#playstop').addEventListener('click', function () {
+        playstop();
+        console.log('1');
+    });
+    function remix() {
+        setInterval(function () {
+            const rmx = Math.floor(Math.random() * audio.length);
+            playbeat(audio[rmx]);
+        }, 420);
     }
+    document.querySelector('#remix-button').addEventListener('click', function () {
+        remix();
+    });
 }
 //# sourceMappingURL=drumscript.js.map

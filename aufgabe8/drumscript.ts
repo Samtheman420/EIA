@@ -39,47 +39,53 @@ document.querySelector(".hihat").addEventListener("click", function () {
 
 })
 
-let beat: string[] = ['sounds/kick.mp3.mp3', 'sounds/hihat.mp3.mp3', "sounds/snare.mp3.mp3", 'sounds/hihat.mp3.mp3']
-let zaehler: number = 0;
-document.querySelector(".play-button").addEventListener("click", playBeat)
-function playThis(soundQuelle: string): void {
-    const beat: HTMLAudioElement = new Audio(soundQuelle);
-    beat.play()
 
+
+var audio = ['sounds/kick.mp3', 'sounds/hihat.mp3', 'sounds/laugh2.mp3', 'sounds/kick.mp3', 'sounds/snare.mp3', 'sounds/hihat.mp3', 'sound/snare.mp3', "sound/laugh1.mp3"];
+var zaehler = 0;
+let beatid;
+function playbeat(text) {
+    var beat = new Audio(text);
+    beat.play();
 }
-function playBeat(): void {
-    setInterval(function (): void {
-        playThis(beat[zaehler]);
-        console.log("test");
-        zaehler++;
-        console.log(beat[zaehler])
-        if (zaehler === 3) {
-            zaehler = 0;
-        } 500);
-
-    { let interval: number = 0; }
-    function PlayBeat() {
-        if (document.getElementsByClassName("play-button").classList.contains("playbutton-play")) {
-            document.getElementsByClassName("play-button").classList.remove("playbutton-play");
-            document.getElementsByClassName("play-button").classList.add("playbutton-stop");
-            interval = setInterval(beat, 350);
+function playBeat() {
+    beatid = setInterval(function () {
+        playbeat(audio[count]);
+        count += 1;
+        if (count > audio.length) {
+            count = 0;
         }
-        else {
-            document.getElementsByClassName("play-button").classList.remove("play-button-stop");
-            document.getElementsByClassName("play-button").classList.add("playbutton-play");
-            clearInterval(interval);
-        }
+    }, 420);
+}
 
 
+let playstopbutton = document.getElementById("playstop");
+let count = 0;
 
-
+function playstop() {
+    if (playstopbutton.classList.contains('fa-play')) {
+        playstopbutton.classList.remove('fa-play');
+        playstopbutton.classList.add('fa-pause');
+        playBeat();
+        console.log('2');
     }
-    function Remix() {
-        document.querySelector("#remix-button").addEventListener("click", function () {
-            Remix = setInterval(function () {
-                playSample(beat[zaehler]);
-                zaehler = Math.floor(Math.random() * 9);
-            }, 300);
-        });
-
+    else {
+        playstopbutton.classList.remove('fa-pause');
+        playstopbutton.classList.add('fa-play');
+        clearInterval(beatid);
+        console.log('3');
     }
+}
+document.querySelector('#playstop-button').addEventListener('click', function () {
+    playstop();
+    console.log('1');
+});
+function remix() {
+    setInterval(function () {
+        const rmx = Math.floor(Math.random() * audio.length);
+        playbeat(audio[rmx]);
+    }, 420);
+}
+document.querySelector('#remix-button').addEventListener('click', function () {
+    remix();
+});
