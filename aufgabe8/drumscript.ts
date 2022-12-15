@@ -41,8 +41,8 @@ document.querySelector(".hihat").addEventListener("click", function () {
 
 
 
-var audio = ['sounds/kick.mp3', 'sounds/hihat.mp3', 'sounds/laugh2.mp3', 'sounds/kick.mp3', 'sounds/snare.mp3', 'sounds/hihat.mp3', 'sound/snare.mp3', "sound/laugh1.mp3"];
-var zaehler = 0;
+let audio = [soundkick, soundsnare, soundhihat,soundkick, soundsnare,soundlaugh];
+let zaehler = 0;
 let beatid;
 function playbeat(text) {
     var beat = new Audio(text);

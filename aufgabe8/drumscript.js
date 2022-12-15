@@ -37,51 +37,49 @@ document.querySelector(".kick").addEventListener("click", function () {
 document.querySelector(".hihat").addEventListener("click", function () {
     playSample(soundhihat);
 });
-let beat = ['sounds/kick.mp3.mp3', 'sounds/hihat.mp3.mp3', "sounds/snare.mp3.mp3", 'sounds/hihat.mp3.mp3'];
+let audio = [soundkick, soundsnare, soundhihat, soundkick, soundsnare, soundlaugh];
 let zaehler = 0;
-document.querySelector(".play-button").addEventListener("click", playBeat);
-function playThis(soundQuelle) {
-    const beat = new Audio(soundQuelle);
+let beatid;
+function playbeat(text) {
+    var beat = new Audio(text);
     beat.play();
 }
 function playBeat() {
-    setInterval(function () {
-        playThis(beat[zaehler]);
-        console.log("test");
-        zaehler++;
-        if (zaehler === 3) {
-            zaehler = 0;
+    beatid = setInterval(function () {
+        playbeat(audio[count]);
+        count += 1;
+        if (count > audio.length) {
+            count = 0;
         }
-        500;
-    });
-    let playstopBTN = document.getElementById("playstop");
-    let count = 0;
-    function playstop() {
-        if (playstopBTN.classList.contains('fa-play')) {
-            playstopBTN.classList.remove('fa-play');
-            playstopBTN.classList.add('fa-pause');
-            playBeat();
-            console.log('2');
-        }
-        else {
-            playstopBTN.classList.remove('fa-pause');
-            playstopBTN.classList.add('fa-play');
-            clearInterval(beatid);
-            console.log('3');
-        }
-    }
-    document.querySelector('#playstop').addEventListener('click', function () {
-        playstop();
-        console.log('1');
-    });
-    function remix() {
-        setInterval(function () {
-            const rmx = Math.floor(Math.random() * audio.length);
-            playbeat(audio[rmx]);
-        }, 420);
-    }
-    document.querySelector('#remix-button').addEventListener('click', function () {
-        remix();
-    });
+    }, 420);
 }
+let playstopbutton = document.getElementById("playstop");
+let count = 0;
+function playstop() {
+    if (playstopbutton.classList.contains('fa-play')) {
+        playstopbutton.classList.remove('fa-play');
+        playstopbutton.classList.add('fa-pause');
+        playBeat();
+        console.log('2');
+    }
+    else {
+        playstopbutton.classList.remove('fa-pause');
+        playstopbutton.classList.add('fa-play');
+        clearInterval(beatid);
+        console.log('3');
+    }
+}
+document.querySelector('#playstop-button').addEventListener('click', function () {
+    playstop();
+    console.log('1');
+});
+function remix() {
+    setInterval(function () {
+        const rmx = Math.floor(Math.random() * audio.length);
+        playbeat(audio[rmx]);
+    }, 420);
+}
+document.querySelector('#remix-button').addEventListener('click', function () {
+    remix();
+});
 //# sourceMappingURL=drumscript.js.map
