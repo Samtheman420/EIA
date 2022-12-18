@@ -21,7 +21,6 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 }
-
 ul li
 
 {
@@ -34,6 +33,11 @@ ul li
     transition: 0.2s;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 ul {
     margin: 0;
@@ -62,6 +66,36 @@ ul {
     height: 15px;
     width: 7px;
   }
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 13px 15px 13px 15px;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.close:hover {
+  background-color: #448ae1;
+  color: white;
+}
+
+
   .header {
     background-color: #8f8585;
     padding: 30px 40px;
