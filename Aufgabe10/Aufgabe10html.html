@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aufgabe10</title>
-    <link rel="stylesheet" href="style10.css">
-    <script src="script10.ts">defer</script>
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style10.css" >
+    <script src="script10.js" ></script>
     
 </head>
 <body>
-    <div id="Divtable" class="Divtable">
-        <h1>TO DO APP</h1>
-        <input type="text" id="myInput" placeholder="Titel">
-        <span onclick="newElement()" class="addbutton">+hinzufügen</span>
-        <ul id="List">
-            <li><li class="checked"></li>geh ins gym</li>
-            <li>geh in Vorlesungen</li>
-            <li>mach Musik</li>
-            <li>esse gesund</li>
-            <li>schreib ein Buch</li>
-            <li>mach ein Youtube Kanal</li>
-          </ul>
-    
-</body>
-</html>
+    <div class="app">
+        <h1>TO DO LIST</h1>
+        <h4 id="todoAmount">0 insgesamt</h4>
+        <div class="task" id="task">
+        <input type="text" id="textfield" placeholder="Add task">
+        <i id="btn" class="fas fa-plus"></i>
+        </div>
+        </div>
+    </body>
+    </html>
