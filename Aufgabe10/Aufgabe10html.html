@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO LIST</title>
-    <link rel="stylesheet" href="style10.css" >
-    <script src="script10.js" ></script>
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style10.css">
+    <script src="script10.js"></script>
 </head>
 <body>
-    <div class="app">
-        <h1>TO DO LIST</h1>
-        <h4 id="todoAmount">0 insgesamt</h4>
-        <div class="task" id="task">
-        <input type="text" id="textfield" placeholder="Add task">
-        <i id="btn" class="fas fa-plus"></i>
+    <main>
+        <h1>To Do App</h1>
+        <p id="counter">3 in total</p>
+
+        <div class="inputGroup">
+            <input type="text" id="inputTodo" placeholder="Add another task">
+            <button id="addButton"><i class="fas fa-plus-circle"></i></button>
         </div>
-        </div>
-    </body>
-    </html>
+
+        <div id="todos"></div>
+    </main>
+</body>
+</html>
